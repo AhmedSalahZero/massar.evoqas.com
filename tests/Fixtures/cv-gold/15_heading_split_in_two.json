@@ -1,0 +1,21 @@
+{
+  "about": "A heading split over two lines ('LANGUAGE / SKILLS:') is joined",
+  "no_unknown_headings": true,
+  "languages": [
+    "ar",
+    "en"
+  ],
+  "skills_include": [
+    "Microsoft Excel",
+    "AutoCAD"
+  ],
+  "work": [
+    {
+      "title": "Maintenance Technician",
+      "employer": "Coca-Cola Egypt",
+      "from": "2017-01",
+      "current": true,
+      "duties": 1
+    }
+  ]
+}

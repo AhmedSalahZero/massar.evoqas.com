@@ -1,0 +1,20 @@
+{
+  "about": "Numbered job titles: '2) Chief Accountant' starts a new job",
+  "work": [
+    {
+      "title": "Chief Accountant",
+      "employer": "Juhayna Food Industries",
+      "from": "2015-01",
+      "current": true,
+      "duties": 1
+    },
+    {
+      "title": "Senior Accountant",
+      "employer": "El Sewedy Electric",
+      "from": "2012-01",
+      "to": "2015-12",
+      "duties": 1
+    }
+  ],
+  "work_mark": "check"
+}

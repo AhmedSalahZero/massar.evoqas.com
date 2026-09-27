@@ -1,0 +1,12 @@
+{
+  "about": "Earlier check: jobs under an unknown heading are read but marked Check",
+  "work": [
+    {
+      "title": "Sales Executive",
+      "employer": "Aramex",
+      "from": "2022-01",
+      "current": true
+    }
+  ],
+  "work_mark": "check"
+}

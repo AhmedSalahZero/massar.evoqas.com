@@ -1,0 +1,20 @@
+{
+  "about": "Company – Title (Date) and Title, Company (Date) on one line",
+  "work": [
+    {
+      "title": "Front Office Manager",
+      "employer": "Hilton Cairo Heliopolis Hotel",
+      "from": "2019-01",
+      "to": "2022-12",
+      "duties": 1
+    },
+    {
+      "title": "Front Desk Agent",
+      "employer": "Marriott Mena House Hotel",
+      "from": "2015-07",
+      "to": "2018-12",
+      "duties": 1
+    }
+  ],
+  "work_mark": "found"
+}

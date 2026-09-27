@@ -1,0 +1,20 @@
+{
+  "about": "A freelance job has no employer",
+  "work": [
+    {
+      "title": "Freelance Graphic Designer",
+      "employer": null,
+      "from": "2020-06",
+      "current": true,
+      "duties": 1
+    },
+    {
+      "title": "Graphic Designer",
+      "employer": "Wunderman Thompson",
+      "from": "2017-08",
+      "to": "2020-05",
+      "duties": 1
+    }
+  ],
+  "work_mark": "found"
+}

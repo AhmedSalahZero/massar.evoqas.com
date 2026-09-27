@@ -1,0 +1,12 @@
+{
+  "about": "Two lines that are both job titles: never guessed, the job is marked Check",
+  "work": [
+    {
+      "title": "Operations Supervisor",
+      "from": "2019-03",
+      "current": true,
+      "check": true
+    }
+  ],
+  "work_mark": "check"
+}

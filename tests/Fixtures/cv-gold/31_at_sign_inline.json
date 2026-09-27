@@ -1,0 +1,18 @@
+{
+  "about": "Title @ Company (years)",
+  "work": [
+    {
+      "title": "Tax Accountant",
+      "employer": "Deloitte",
+      "from": "2019-01",
+      "to": "2021-12"
+    },
+    {
+      "title": "Audit Associate",
+      "employer": "KPMG Hazem Hassan",
+      "from": "2016-01",
+      "to": "2019-12"
+    }
+  ],
+  "work_mark": "check"
+}

@@ -1,0 +1,22 @@
+{
+  "about": "Company, City and dates on one line; the title below",
+  "work": [
+    {
+      "title": "Sales Supervisor",
+      "employer": "Nestle Egypt",
+      "location": "Cairo",
+      "from": "2018-01",
+      "current": true,
+      "duties": 1
+    },
+    {
+      "title": "Sales Representative",
+      "employer": "Pepsico Egypt",
+      "location": "Tanta",
+      "from": "2014-02",
+      "to": "2017-12",
+      "duties": 1
+    }
+  ],
+  "work_mark": "found"
+}

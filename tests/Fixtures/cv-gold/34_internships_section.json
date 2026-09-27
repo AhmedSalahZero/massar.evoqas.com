@@ -1,0 +1,19 @@
+{
+  "about": "Internships written Title – Company – Date",
+  "work": [
+    {
+      "title": "Summer Intern",
+      "employer": "CIB",
+      "from": "2019-07",
+      "to": "2019-08",
+      "duties": 1
+    },
+    {
+      "title": "Finance Intern",
+      "employer": "Unilever",
+      "from": "2018-07",
+      "to": "2018-09",
+      "duties": 1
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "about": "A course with dates inside the experience section is not a job",
+  "work": [
+    {
+      "title": "Electrical Technician",
+      "employer": "Elsewedy Electric",
+      "from": "2017-03",
+      "current": true,
+      "duties": 1
+    },
+    {
+      "title": "Military Service",
+      "employer": "Egyptian Armed Forces",
+      "from": "2015-01",
+      "to": "2016-03"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "about": "Every detail on its own labelled line",
+  "work": [
+    {
+      "title": "Production Planner",
+      "employer": "Elaraby Group",
+      "from": "2019-01",
+      "current": true,
+      "duties": 1
+    },
+    {
+      "title": "Planning Engineer",
+      "employer": "Olympic Group",
+      "from": "2016-03",
+      "to": "2018-12",
+      "duties": 1
+    }
+  ],
+  "work_mark": "found"
+}

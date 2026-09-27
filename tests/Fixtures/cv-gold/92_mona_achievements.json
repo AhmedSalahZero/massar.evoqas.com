@@ -1,0 +1,22 @@
+{
+  "about": "Earlier check: Achievements inside a job",
+  "work": [
+    {
+      "title": "Sales Supervisor",
+      "employer": "Nile Foods",
+      "from": "2020-01",
+      "current": true,
+      "duties": 2
+    },
+    {
+      "title": "Sales Representative",
+      "employer": "Nile Foods",
+      "from": "2017-03",
+      "to": "2019-12",
+      "duties": 1
+    }
+  ],
+  "skills_include": [
+    "Negotiation"
+  ]
+}

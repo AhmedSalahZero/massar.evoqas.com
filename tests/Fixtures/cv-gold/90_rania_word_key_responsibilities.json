@@ -1,0 +1,21 @@
+{
+  "about": "Earlier check (Step 6.5)",
+  "work": [
+    {
+      "title": "Budgeting and Financial Reporting Team Leader",
+      "employer": "Universal for Metal and Supporting Industries",
+      "from": "2017-02",
+      "to": null,
+      "current": true,
+      "duties": 2
+    },
+    {
+      "title": "Financial Reporting Manager",
+      "employer": "Easy Group",
+      "from": "2014-11",
+      "to": "2017-02",
+      "duties": 2
+    }
+  ],
+  "work_mark": "found"
+}

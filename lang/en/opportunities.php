@@ -1,0 +1,43 @@
+<?php
+
+// Massar — Jobs & Training messages (Step 12). Arabic: lang/ar/opportunities.php
+return [
+    'created'         => ':kind created. You can now check people against it.',
+    'saved'           => ':kind saved.',
+    'saved_outdated'  => ':kind saved. The eligibility rules changed: :n earlier results need checking again.',
+    'copied'          => 'Copy created. Change the title and what you need.',
+    'copy_suffix'     => '(copy)',
+    'closed'          => ':kind closed. Its results are kept.',
+    'reopened'        => ':kind open again.',
+    'deleted'         => ':kind deleted.',
+    'cannot_delete'   => 'People were already checked against it. Close it instead: its results are kept.',
+    'closed_no_check' => 'It is closed. Open it again to check people.',
+    'checked'         => 'Checked against ":title": :result (score :score).',
+    'run_nobody'      => 'Nobody to check.',
+    'kind' => [
+        'job'      => 'Job',
+        'training' => 'Training program',
+    ],
+    'v' => [
+        'title'           => 'Write a title.',
+        'occupations'     => 'Choose at least one occupation.',
+        'occupations_max' => ':n occupations at most.',
+        'occupation_bad'  => 'This occupation is not in the backbone. Choose it from the list.',
+        'governorates'    => 'Choose at least one governorate.',
+        'seats'           => 'Enter the number of seats, from 1 to 100,000.',
+        'date'            => 'Enter a valid date.',
+        'ends_after'      => 'The end date cannot be before the start date.',
+        'contact'         => 'Choose someone of your team.',
+        'employer'        => 'Choose the company from the list again, or type it.',
+        'sector'          => 'Choose a sub-sector from the list.',
+        'job_type'        => 'Choose the job type.',
+        'salary'          => 'Enter an amount in EGP a month.',
+        'salary_order'    => '"To" cannot be lower than "From".',
+        'provider'        => 'Write who gives the training.',
+        'duration'        => 'Enter a number and choose hours, days, weeks or months.',
+        'cost'            => 'Enter the amount the trainee pays.',
+        'choose'          => 'Choose from the list.',
+        'close_reason'    => 'Choose why it is closed: filled, cancelled or finished.',
+        'opportunity'     => 'Choose an open job or training.',
+    ],
+];

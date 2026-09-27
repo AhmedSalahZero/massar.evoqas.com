@@ -1,0 +1,22 @@
+{
+  "about": "Date / Title – Company, Country; the place is kept apart",
+  "work": [
+    {
+      "title": "Financial Controller",
+      "employer": "Al Marai Company",
+      "location": "KSA",
+      "from": "2021-01",
+      "current": true,
+      "duties": 1
+    },
+    {
+      "title": "Senior Accountant",
+      "employer": "Qatar Airways",
+      "location": "Doha, Qatar",
+      "from": "2017-01",
+      "to": "2021-12",
+      "duties": 1
+    }
+  ],
+  "work_mark": "check"
+}

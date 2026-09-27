@@ -1,0 +1,20 @@
+Ahmed Hassan Mahmoud
+Senior Accountant
+Nasr City, Cairo | +20 100 555 1234 | ahmed.hassan@example.com
+#PROFESSIONAL SUMMARY
+Accountant with 6 years of experience in general accounting.
+#WORK EXPERIENCE
+Accountant — Delta Trading | Mar 2021 – Present
+- Prepared monthly financial statements
+Junior Accountant, Nile Foods (01/2018 - 02/2021)
+#EDUCATION
+Bachelor of Commerce, Accounting — Cairo University, 2017
+#SKILLS
+Microsoft Excel, SAP, Budget planning
+#LANGUAGES
+Arabic: Native
+English: Fluent
+#PERSONAL INFORMATION
+Date of Birth: 23/05/1995
+Gender: Male
+Military Status: Completed

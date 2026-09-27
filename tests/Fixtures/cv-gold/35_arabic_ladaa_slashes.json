@@ -1,0 +1,20 @@
+{
+  "about": "Arabic: title لدى company, then the dates",
+  "work": [
+    {
+      "title": "سكرتيرة تنفيذية",
+      "employer": "شركة المقاولون العرب",
+      "from": "2017-05",
+      "to": "2022-08",
+      "duties": 2
+    },
+    {
+      "title": "موظفة استقبال",
+      "employer": "فندق سميراميس انتركونتيننتال",
+      "from": "2014-01",
+      "to": "2017-04",
+      "duties": 1
+    }
+  ],
+  "work_mark": "found"
+}

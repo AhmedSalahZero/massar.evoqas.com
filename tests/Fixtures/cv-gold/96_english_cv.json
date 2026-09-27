@@ -1,0 +1,30 @@
+{
+  "about": "The sample English CV of the automated checks",
+  "work": [
+    {
+      "title": "Accountant",
+      "employer": "Delta Trading",
+      "from": "2021-03",
+      "current": true,
+      "duties": 1
+    },
+    {
+      "title": "Junior Accountant",
+      "employer": "Nile Foods",
+      "from": "2018-01",
+      "to": "2021-02",
+      "duties": 0
+    }
+  ],
+  "work_mark": "found",
+  "education": [
+    {
+      "qualification": "Bachelor of Commerce",
+      "year": 2017
+    }
+  ],
+  "languages": [
+    "ar",
+    "en"
+  ]
+}

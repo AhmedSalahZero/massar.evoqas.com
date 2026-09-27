@@ -1,0 +1,20 @@
+{
+  "about": "'Barista' and 'Cashier' are official job titles (ESCO) even without a title word",
+  "work": [
+    {
+      "title": "Barista",
+      "employer": "Costa Coffee",
+      "from": "2021-01",
+      "current": true,
+      "duties": 1
+    },
+    {
+      "title": "Cashier",
+      "employer": "Carrefour Egypt",
+      "from": "2019-06",
+      "to": "2020-12",
+      "duties": 1
+    }
+  ],
+  "work_mark": "found"
+}

@@ -1,0 +1,35 @@
+{
+  "about": "Earlier check: many ways of writing dates",
+  "work": [
+    {
+      "title": "Internship",
+      "employer": "Orascom",
+      "from": "2017-08",
+      "to": "2017-09"
+    },
+    {
+      "title": "Internship",
+      "employer": "Workers Bank",
+      "from": "2017-07",
+      "to": "2017-08"
+    },
+    {
+      "title": "Digital Ambassador",
+      "employer": "CIB",
+      "from": "2016-01"
+    },
+    {
+      "title": "Intern",
+      "employer": "Electrolux",
+      "from": "2015-06",
+      "to": "2015-09"
+    },
+    {
+      "title": "Internal Auditor",
+      "employer": "Egyptian Warehouses Company",
+      "from": "2008-01",
+      "to": "2012-04"
+    }
+  ],
+  "work_mark": "check"
+}

@@ -1,0 +1,20 @@
+{
+  "about": "Two titles, each with its own dates, under one company",
+  "work": [
+    {
+      "title": "Team Leader",
+      "employer": "Vodafone Egypt",
+      "from": "2018-03",
+      "current": true,
+      "duties": 1
+    },
+    {
+      "title": "Customer Care Agent",
+      "employer": "Vodafone Egypt",
+      "from": "2015-01",
+      "to": "2018-02",
+      "duties": 1
+    }
+  ],
+  "work_mark": "found"
+}

@@ -1,0 +1,20 @@
+{
+  "about": "Arabic: company / title / date",
+  "work": [
+    {
+      "title": "مهندس موقع",
+      "employer": "شركة أوراسكوم للإنشاءات",
+      "from": "2016-01",
+      "current": true,
+      "duties": 1
+    },
+    {
+      "title": "مهندس تخطيط",
+      "employer": "شركة حسن علام",
+      "from": "2012-01",
+      "to": "2016-12",
+      "duties": 1
+    }
+  ],
+  "work_mark": "check"
+}

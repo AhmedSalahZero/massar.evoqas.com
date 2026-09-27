@@ -1,0 +1,5 @@
+﻿occupationUri,occupationLabel,relationType,skillType,skillUri,skillLabel
+http://data.europa.eu/esco/occupation/auditor,,essential,,http://data.europa.eu/esco/skill/tax,
+http://data.europa.eu/esco/occupation/auditor,,optional,,http://data.europa.eu/esco/skill/accounting,
+http://data.europa.eu/esco/occupation/clerk,,essential,,http://data.europa.eu/esco/skill/tax,
+http://data.europa.eu/esco/occupation/clerk,,essential,,http://data.europa.eu/esco/skill/teamwork,

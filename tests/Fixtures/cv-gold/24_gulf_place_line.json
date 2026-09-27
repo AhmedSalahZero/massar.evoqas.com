@@ -1,0 +1,22 @@
+{
+  "about": "The place on its own line goes neither in the title nor in the employer",
+  "work": [
+    {
+      "title": "Accounts Payable Accountant",
+      "employer": "Al Futtaim Group",
+      "location": "Dubai, UAE",
+      "from": "2021-04",
+      "current": true,
+      "duties": 1
+    },
+    {
+      "title": "General Accountant",
+      "employer": "Savola Foods",
+      "location": "Jeddah, Saudi Arabia",
+      "from": "2017-01",
+      "to": "2021-03",
+      "duties": 1
+    }
+  ],
+  "work_mark": "found"
+}

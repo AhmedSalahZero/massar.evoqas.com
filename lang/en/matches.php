@@ -1,0 +1,53 @@
+<?php
+
+// Massar — Matches messages (Step 13). Arabic: lang/ar/matches.php
+return [
+    'referred_one'     => ':name referred to ":title".',
+    'referred_n'       => ':n referred to ":title".',
+    'already_one'      => ':name is already referred to it. Follow the match in its Matches part.',
+    'stopped_one'      => ':name was referred before and the match was stopped. Restart it instead.',
+    'not_eligible_one' => ':name is :result (score :score). Only Eligible people can be referred. Change the result first if the case worker decides so.',
+    'skipped_already'  => ':n already referred.',
+    'skipped_stopped'  => ':n stopped earlier (restart them instead).',
+    'skipped_not_eligible' => ':n not Eligible, not referred.',
+    'already_hired'    => 'Reminder: :name is already hired at ":title".',
+    'already_training' => 'Reminder: :name is already in training at ":title".',
+    'moved'            => 'Moved to: :stage.',
+    'corrected'        => 'Moved back to: :stage. The correction is in the timeline.',
+    'stopped'          => 'Match stopped. It stays in the timeline.',
+    'restarted'        => 'Match restarted at: :stage.',
+    'seats_full'       => 'All seats are taken (:taken of :seats). Close it as Filled if nobody else will be taken.',
+    'stage' => [
+        'job' => [
+            'referred'    => 'Referred to the employer',
+            'accepted'    => 'Accepted by the employer',
+            'in_progress' => 'Interviewing',
+            'done'        => 'Hired',
+        ],
+        'training' => [
+            'referred'    => 'Referred to the provider',
+            'accepted'    => 'Accepted into the training',
+            'in_progress' => 'In training',
+            'done'        => 'Completed',
+        ],
+    ],
+    'v' => [
+        'opportunity'  => 'Choose an open job or training.',
+        'closed'       => 'It is closed: nobody new can be referred. Open it again first.',
+        'people'       => 'Choose the people to refer.',
+        'too_many'     => ':n people at most in one go.',
+        'note'         => 'The note can be 500 characters at most.',
+        'date'         => 'Enter a valid date.',
+        'future'       => 'The date cannot be in the future.',
+        'before'       => 'The date cannot be before the current stage (:date).',
+        'forward'      => 'Choose a later stage.',
+        'final'        => 'Hired / Completed is final. Use "Back one stage" to correct it.',
+        'stopped'      => 'This match is stopped. Restart it first.',
+        'not_stopped'  => 'This match is not stopped.',
+        'first_stage'  => 'It is already at the first stage.',
+        'reason'       => 'Write the reason.',
+        'stop_reason'  => 'Choose why it stops.',
+        'other'        => 'Write the reason (you chose "Other").',
+        'restart_not_eligible' => 'The person is :result now. Only Eligible people can be referred again: change the result first.',
+    ],
+];

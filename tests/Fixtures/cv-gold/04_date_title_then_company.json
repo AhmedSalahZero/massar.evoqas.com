@@ -1,0 +1,20 @@
+{
+  "about": "Date | Title, then the company on the next line (no company word in 'Vodafone Egypt')",
+  "work": [
+    {
+      "title": "HR Specialist",
+      "employer": "Vodafone Egypt",
+      "from": "2018-03",
+      "current": true,
+      "duties": 1
+    },
+    {
+      "title": "HR Coordinator",
+      "employer": "Orascom Construction",
+      "from": "2015-01",
+      "to": "2018-02",
+      "duties": 1
+    }
+  ],
+  "work_mark": "found"
+}

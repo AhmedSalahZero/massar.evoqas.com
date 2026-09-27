@@ -1,0 +1,20 @@
+{
+  "about": "'Bank Branch Manager' is a title even with the word Bank",
+  "work": [
+    {
+      "title": "Bank Branch Manager",
+      "employer": "QNB Alahli",
+      "from": "2018-01",
+      "current": true,
+      "duties": 1
+    },
+    {
+      "title": "Senior Banker",
+      "employer": "Banque Misr",
+      "from": "2012-01",
+      "to": "2018-12",
+      "duties": 1
+    }
+  ],
+  "work_mark": "check"
+}

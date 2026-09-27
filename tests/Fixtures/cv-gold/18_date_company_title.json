@@ -1,0 +1,20 @@
+{
+  "about": "Date / Company / Title",
+  "work": [
+    {
+      "title": "Network Engineer",
+      "employer": "Etisalat Misr",
+      "from": "2020-01",
+      "current": true,
+      "duties": 1
+    },
+    {
+      "title": "Transmission Engineer",
+      "employer": "Telecom Egypt",
+      "from": "2016-08",
+      "to": "2019-12",
+      "duties": 1
+    }
+  ],
+  "work_mark": "found"
+}

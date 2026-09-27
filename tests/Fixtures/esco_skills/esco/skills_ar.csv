@@ -1,0 +1,4 @@
+﻿conceptType,conceptUri,skillType,reuseLevel,preferredLabel,altLabels,hiddenLabels,status,modifiedDate,scopeNote,definition,inScheme,description
+KnowledgeSkillCompetence,http://data.europa.eu/esco/skill/tax,skill/competence,sector-specific,حساب الضرائب,,,released,2025-01-01T00:00:00Z,,,,حساب الضرائب المستحقة.
+KnowledgeSkillCompetence,http://data.europa.eu/esco/skill/accounting,knowledge,cross-sector,المحاسبة,,,released,2025-01-01T00:00:00Z,,,,تسجيل المعاملات المالية.
+KnowledgeSkillCompetence,http://data.europa.eu/esco/skill/teamwork,skill/competence,transversal,العمل ضمن فريق,,,released,2025-01-01T00:00:00Z,,,,العمل مع الآخرين.

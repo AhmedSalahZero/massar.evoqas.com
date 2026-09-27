@@ -1,0 +1,18 @@
+{
+  "about": "Date / Title / Company with no duties: the lines after each date belong to it",
+  "work": [
+    {
+      "title": "Customer Service Representative",
+      "employer": "Majorel Egypt",
+      "from": "2020-09",
+      "current": true
+    },
+    {
+      "title": "Call Center Agent",
+      "employer": "Teleperformance",
+      "from": "2018-01",
+      "to": "2020-08"
+    }
+  ],
+  "work_mark": "found"
+}

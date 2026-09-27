@@ -1,0 +1,20 @@
+{
+  "about": "Title and dates on one line, company below",
+  "work": [
+    {
+      "title": "Mechanical Engineer",
+      "employer": "Petrojet",
+      "from": "2019-01",
+      "current": true,
+      "duties": 1
+    },
+    {
+      "title": "Maintenance Engineer",
+      "employer": "Egyptian Refining Company",
+      "from": "2015-01",
+      "to": "2019-12",
+      "duties": 1
+    }
+  ],
+  "work_mark": "check"
+}

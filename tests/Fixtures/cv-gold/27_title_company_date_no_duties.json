@@ -1,0 +1,27 @@
+{
+  "about": "Jobs with no duties between them: the CV's own pattern decides which lines go with which dates",
+  "work": [
+    {
+      "title": "Store Manager",
+      "employer": "Carrefour Maadi City Centre",
+      "from": "2021-02",
+      "current": true,
+      "duties": 0
+    },
+    {
+      "title": "Assistant Store Manager",
+      "employer": "Spinneys Egypt",
+      "from": "2018-01",
+      "to": "2021-01",
+      "duties": 0
+    },
+    {
+      "title": "Sales Associate",
+      "employer": "Zara",
+      "from": "2015-07",
+      "to": "2017-12",
+      "duties": 0
+    }
+  ],
+  "work_mark": "found"
+}

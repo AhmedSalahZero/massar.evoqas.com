@@ -1,0 +1,7 @@
+﻿conceptType,conceptUri,conceptLabel,broaderType,broaderUri,broaderLabel
+SkillGroup,http://data.europa.eu/esco/skill/group-s1,,SkillGroup,http://data.europa.eu/esco/skill/root-s,
+SkillGroup,http://data.europa.eu/esco/isced-f/04,,SkillGroup,http://data.europa.eu/esco/skill/root-k,
+KnowledgeSkillCompetence,http://data.europa.eu/esco/skill/tax,,SkillGroup,http://data.europa.eu/esco/skill/group-s1,
+KnowledgeSkillCompetence,http://data.europa.eu/esco/skill/accounting,,SkillGroup,http://data.europa.eu/esco/isced-f/04,
+KnowledgeSkillCompetence,http://data.europa.eu/esco/skill/teamwork,,SkillGroup,http://data.europa.eu/esco/skill/group-s1,
+KnowledgeSkillCompetence,http://data.europa.eu/esco/skill/teamwork,,KnowledgeSkillCompetence,http://data.europa.eu/esco/skill/tax,

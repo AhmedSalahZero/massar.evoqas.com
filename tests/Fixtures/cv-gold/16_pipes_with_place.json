@@ -1,0 +1,20 @@
+{
+  "about": "Title | Company | Place | Years on one line",
+  "work": [
+    {
+      "title": "Project Engineer",
+      "employer": "Hassan Allam Holding",
+      "location": "Riyadh, KSA",
+      "from": "2019-01",
+      "to": "2023-12"
+    },
+    {
+      "title": "Site Engineer",
+      "employer": "Arab Contractors",
+      "location": "Cairo",
+      "from": "2014-01",
+      "to": "2019-12"
+    }
+  ],
+  "work_mark": "check"
+}

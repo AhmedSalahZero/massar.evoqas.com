@@ -1,0 +1,22 @@
+{
+  "about": "Under headings the app does not know, degrees go to Education and courses stay out of the jobs",
+  "work": [
+    {
+      "title": "Teacher of English",
+      "employer": "Modern Language School",
+      "from": "2015-09",
+      "current": true,
+      "duties": 1
+    }
+  ],
+  "education": [
+    {
+      "qualification": "Bachelor of Arts in English",
+      "year": 2015
+    },
+    {
+      "qualification": "Diploma in Education",
+      "year": 2017
+    }
+  ]
+}

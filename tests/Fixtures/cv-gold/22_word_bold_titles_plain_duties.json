@@ -1,0 +1,20 @@
+{
+  "about": "Word file, bold titles, duties without bullets",
+  "work": [
+    {
+      "title": "Procurement Specialist",
+      "employer": "Schneider Electric",
+      "from": "2019-06",
+      "current": true,
+      "duties": 2
+    },
+    {
+      "title": "Purchasing Officer",
+      "employer": "Elsewedy Cables",
+      "from": "2015-03",
+      "to": "2019-05",
+      "duties": 1
+    }
+  ],
+  "work_mark": "found"
+}

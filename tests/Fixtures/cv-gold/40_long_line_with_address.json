@@ -1,0 +1,20 @@
+{
+  "about": "Everything on one line, with the address",
+  "work": [
+    {
+      "title": "Senior Accountant",
+      "employer": "Delta Trading Co.",
+      "location": "Nasr City, Cairo, Egypt",
+      "from": "2017-01",
+      "to": "2020-12"
+    },
+    {
+      "title": "Accountant",
+      "employer": "Misr Insurance",
+      "location": "Giza, Egypt",
+      "from": "2013-02",
+      "to": "2016-12"
+    }
+  ],
+  "work_mark": "found"
+}

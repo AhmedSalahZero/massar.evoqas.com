@@ -1,0 +1,21 @@
+{
+  "about": "A PDF broke a long title over two lines",
+  "pdf": true,
+  "work": [
+    {
+      "title": "Senior Human Resources and Organizational Development Specialist",
+      "employer": "Orange Business Services",
+      "from": "2019-03",
+      "current": true,
+      "duties": 2
+    },
+    {
+      "title": "HR Specialist",
+      "employer": "Raya Holding",
+      "from": "2015-06",
+      "to": "2019-02",
+      "duties": 1
+    }
+  ],
+  "work_mark": "found"
+}

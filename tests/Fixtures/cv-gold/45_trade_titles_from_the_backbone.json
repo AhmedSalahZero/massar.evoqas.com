@@ -1,0 +1,22 @@
+{
+  "about": "'Welder' and 'Fitter' have no title word: the official titles (ESCO) show they are the job titles",
+  "work": [
+    {
+      "title": "Welder",
+      "employer": "Arabian Pipes",
+      "from": "2019-03",
+      "current": true,
+      "duties": 1,
+      "check": false
+    },
+    {
+      "title": "Fitter",
+      "employer": "Kamal Metal Works",
+      "from": "2015-01",
+      "to": "2019-02",
+      "duties": 1,
+      "check": false
+    }
+  ],
+  "work_mark": "found"
+}

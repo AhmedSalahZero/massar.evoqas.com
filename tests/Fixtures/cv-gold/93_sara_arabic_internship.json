@@ -1,0 +1,20 @@
+{
+  "about": "Earlier check: Arabic duties and an internship",
+  "work": [
+    {
+      "title": "محاسب",
+      "employer": "شركة النيل للتجارة",
+      "from": "2019-03",
+      "current": true,
+      "duties": 2
+    },
+    {
+      "title": "Internship",
+      "employer": "CI Capital",
+      "from": "2014-06",
+      "to": "2014-07",
+      "current": false,
+      "duties": 1
+    }
+  ]
+}

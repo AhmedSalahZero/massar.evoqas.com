@@ -1,0 +1,20 @@
+{
+  "about": "Company line above 'Title, Date'; duties written as sentences",
+  "work": [
+    {
+      "title": "Relationship Manager",
+      "employer": "Mashreq Bank, Cairo Branch",
+      "from": "2018-10",
+      "current": true,
+      "duties": 2
+    },
+    {
+      "title": "Personal Banker",
+      "employer": "CIB – Commercial International Bank",
+      "from": "2015-01",
+      "to": "2018-09",
+      "duties": 1
+    }
+  ],
+  "work_mark": "found"
+}

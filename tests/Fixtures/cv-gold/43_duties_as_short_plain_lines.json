@@ -1,0 +1,20 @@
+{
+  "about": "Duties as short plain lines (not verbs) under the dates",
+  "work": [
+    {
+      "title": "Warehouse Supervisor",
+      "employer": "Mansour Distribution",
+      "from": "2019-01",
+      "current": true,
+      "duties": 3
+    },
+    {
+      "title": "Storekeeper",
+      "employer": "Metro Markets",
+      "from": "2016-01",
+      "to": "2018-12",
+      "duties": 1
+    }
+  ],
+  "work_mark": "found"
+}

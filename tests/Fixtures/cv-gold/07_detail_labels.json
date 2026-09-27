@@ -1,0 +1,21 @@
+{
+  "about": "'Industry:' is skipped, 'Location:' is the place, 'Period:' the dates",
+  "work": [
+    {
+      "title": "Sales Manager",
+      "employer": "Americana Foods",
+      "location": "Cairo, Egypt",
+      "from": "2019-02",
+      "current": true,
+      "duties": 2
+    },
+    {
+      "title": "Area Sales Supervisor",
+      "employer": "PepsiCo Egypt",
+      "location": "Alexandria",
+      "from": "2015-07",
+      "to": "2019-01",
+      "duties": 1
+    }
+  ]
+}

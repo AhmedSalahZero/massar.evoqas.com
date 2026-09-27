@@ -1,0 +1,23 @@
+{
+  "about": "Title / Company / Date, with bullets",
+  "work": [
+    {
+      "title": "Senior Accountant",
+      "employer": "Nile Foods Co.",
+      "from": "2020-01",
+      "to": null,
+      "current": true,
+      "duties": 2,
+      "check": false
+    },
+    {
+      "title": "Accountant",
+      "employer": "Delta Trading Company",
+      "from": "2016-03",
+      "to": "2019-12",
+      "duties": 1,
+      "check": false
+    }
+  ],
+  "work_mark": "found"
+}

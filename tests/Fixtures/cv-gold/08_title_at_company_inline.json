@@ -1,0 +1,20 @@
+{
+  "about": "Title at Company | Date on one line",
+  "work": [
+    {
+      "title": "Marketing Specialist",
+      "employer": "Unilever Mashreq",
+      "from": "2021-04",
+      "current": true,
+      "duties": 1
+    },
+    {
+      "title": "Customer Service Agent",
+      "employer": "Raya Contact Center",
+      "from": "2018-06",
+      "to": "2021-03",
+      "duties": 1
+    }
+  ],
+  "work_mark": "found"
+}

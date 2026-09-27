@@ -1,0 +1,20 @@
+{
+  "about": "Arabic: title / company / date",
+  "work": [
+    {
+      "title": "محاسب أول",
+      "employer": "شركة النساجون الشرقيون",
+      "from": "2019-01",
+      "current": true,
+      "duties": 2
+    },
+    {
+      "title": "محاسب",
+      "employer": "مصنع الأمل للبلاستيك",
+      "from": "2015-03",
+      "to": "2018-12",
+      "duties": 1
+    }
+  ],
+  "work_mark": "found"
+}

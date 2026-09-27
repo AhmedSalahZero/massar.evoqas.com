@@ -1,0 +1,18 @@
+{
+  "about": "'Current Employer:' / 'Previous Employer:' labels",
+  "work": [
+    {
+      "title": "HR Business Partner",
+      "employer": "Majid Al Futtaim",
+      "from": "2021-06",
+      "current": true
+    },
+    {
+      "title": "HR Generalist",
+      "employer": "Americana Restaurants",
+      "from": "2017-01",
+      "to": "2021-05"
+    }
+  ],
+  "work_mark": "found"
+}

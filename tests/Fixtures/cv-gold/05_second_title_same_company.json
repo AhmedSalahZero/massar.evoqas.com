@@ -1,0 +1,21 @@
+{
+  "about": "A second title under the same company, without dates, is its own job marked Check",
+  "work": [
+    {
+      "title": "Chief Accountant",
+      "employer": "Egyptian Steel Group",
+      "from": "2014-01",
+      "current": true,
+      "duties": 2,
+      "check": false
+    },
+    {
+      "title": "Financial Analyst",
+      "employer": "Egyptian Steel Group",
+      "from": null,
+      "duties": 2,
+      "check": true
+    }
+  ],
+  "work_mark": "check"
+}

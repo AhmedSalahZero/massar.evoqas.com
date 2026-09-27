@@ -1,0 +1,44 @@
+<?php
+
+namespace App\Http\Requests\Auth;
+
+use App\Http\Requests\Concerns\SetsLocaleFromRequest;
+use Illuminate\Foundation\Http\FormRequest;
+
+// ══════════════════════════════════════════════════════════════════
+//  Massar — ForgotPasswordRequest
+//  Location: app/Http/Requests/Auth/ForgotPasswordRequest.php
+//
+//  Validates the forgot-password email, answering in the page's
+//  language (SetsLocaleFromRequest).
+// ══════════════════════════════════════════════════════════════════
+
+class ForgotPasswordRequest extends FormRequest
+{
+    use SetsLocaleFromRequest;
+
+    public function authorize(): bool
+    {
+        return true;
+    }
+
+    public function rules(): array
+    {
+        return [
+            'email'  => ['required', 'string', 'email', 'exists:users,email'],
+            'locale' => ['nullable', 'string', 'in:en,ar'],
+        ];
+    }
+
+    protected function prepareForValidation(): void
+    {
+        $this->applyRequestLocale();
+    }
+
+    public function messages(): array
+    {
+        return [
+            'email.exists' => __('auth.reset_email_not_found'),
+        ];
+    }
+}

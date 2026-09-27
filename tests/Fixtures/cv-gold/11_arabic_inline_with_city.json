@@ -1,0 +1,19 @@
+{
+  "about": "Arabic on one line, with the city apart",
+  "work": [
+    {
+      "title": "مدير مبيعات",
+      "employer": "شركة جهينة",
+      "location": "القاهرة",
+      "from": "2018-03",
+      "to": "2022-06"
+    },
+    {
+      "title": "مندوب مبيعات",
+      "employer": "شركة بيبسيكو مصر",
+      "from": "2014-01",
+      "to": "2018-02"
+    }
+  ],
+  "work_mark": "found"
+}

@@ -1,0 +1,18 @@
+{
+  "about": "'Worked as … in/with …' sentences",
+  "work": [
+    {
+      "title": "Sales Representative",
+      "employer": "Nestle Egypt",
+      "from": "2014-01",
+      "current": true
+    },
+    {
+      "title": "Accountant",
+      "employer": "Egyptian Sugar Company",
+      "from": "2010-01",
+      "to": "2014-12"
+    }
+  ],
+  "work_mark": "check"
+}

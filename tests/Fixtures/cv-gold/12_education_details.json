@@ -1,0 +1,22 @@
+{
+  "about": "'Majors:', 'Grade:' and 'License number:' are details inside Education, not headings",
+  "no_unknown_headings": true,
+  "education": [
+    {
+      "qualification": "Bachelor of Pharmacy",
+      "institution": "Cairo University",
+      "year": 2016,
+      "field": "Clinical Pharmacy"
+    }
+  ],
+  "work": [
+    {
+      "title": "Pharmacist",
+      "employer": "Seif Pharmacies",
+      "from": "2016-09",
+      "current": true,
+      "duties": 1
+    }
+  ],
+  "work_mark": "found"
+}

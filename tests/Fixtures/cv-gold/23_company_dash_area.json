@@ -1,0 +1,22 @@
+{
+  "about": "Company – Area above Title | Date",
+  "work": [
+    {
+      "title": "Senior Quantity Surveyor",
+      "employer": "Emaar Misr",
+      "location": "New Cairo",
+      "from": "2020-02",
+      "current": true,
+      "duties": 1
+    },
+    {
+      "title": "Quantity Surveyor",
+      "employer": "Talaat Moustafa Group",
+      "location": "Madinaty",
+      "from": "2016-06",
+      "to": "2020-01",
+      "duties": 1
+    }
+  ],
+  "work_mark": "found"
+}

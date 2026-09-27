@@ -1,0 +1,20 @@
+{
+  "about": "Company / Title / Date; 'Bank Teller' is a title although it has the word Bank",
+  "work": [
+    {
+      "title": "Credit Analyst",
+      "employer": "Arab African International Bank",
+      "from": "2019-06",
+      "current": true,
+      "duties": 2
+    },
+    {
+      "title": "Bank Teller",
+      "employer": "Banque Misr",
+      "from": "2016-09",
+      "to": "2019-05",
+      "duties": 1
+    }
+  ],
+  "work_mark": "found"
+}

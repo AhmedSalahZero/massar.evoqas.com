@@ -1,0 +1,20 @@
+{
+  "about": "Title (Date), then the company on the next line",
+  "work": [
+    {
+      "title": "Graphic Designer",
+      "employer": "Tarek Nour Communications",
+      "from": "2021-03",
+      "current": true,
+      "duties": 1
+    },
+    {
+      "title": "Junior Designer",
+      "employer": "Memac Ogilvy",
+      "from": "2019-02",
+      "to": "2021-02",
+      "duties": 1
+    }
+  ],
+  "work_mark": "found"
+}

@@ -1,0 +1,7 @@
+﻿conceptType,conceptUri,skillType,reuseLevel,preferredLabel,altLabels,hiddenLabels,status,modifiedDate,scopeNote,definition,inScheme,description
+KnowledgeSkillCompetence,http://data.europa.eu/esco/skill/tax,skill/competence,sector-specific,calculate tax,"work out taxes
+compute tax",,released,2025-01-01T00:00:00Z,,,,Calculate the taxes owed.
+KnowledgeSkillCompetence,http://data.europa.eu/esco/skill/accounting,knowledge,cross-sector,accounting,bookkeeping,,released,2025-01-01T00:00:00Z,,,,The recording of financial transactions.
+KnowledgeSkillCompetence,http://data.europa.eu/esco/skill/teamwork,skill/competence,transversal,work in teams,,,released,2025-01-01T00:00:00Z,,,,Work with others.
+KnowledgeSkillCompetence,http://data.europa.eu/esco/skill/tax,skill/competence,sector-specific,calculate tax,"work out taxes
+compute tax",,released,2024-01-01T00:00:00Z,,,,OLD COPY

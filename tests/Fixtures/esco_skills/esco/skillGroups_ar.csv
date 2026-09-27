@@ -1,0 +1,5 @@
+﻿conceptType,conceptUri,preferredLabel,altLabels,hiddenLabels,status,modifiedDate,scopeNote,inScheme,description,code
+SkillGroup,http://data.europa.eu/esco/skill/root-s,مهارات,,,released,,,,,S
+SkillGroup,http://data.europa.eu/esco/skill/group-s1,التواصل,,,released,,,,,S1
+SkillGroup,http://data.europa.eu/esco/skill/root-k,المعرفة,,,released,,,,,K
+SkillGroup,http://data.europa.eu/esco/isced-f/04,,,,released,,,,,04

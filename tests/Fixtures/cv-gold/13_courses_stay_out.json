@@ -1,0 +1,17 @@
+{
+  "about": "Courses with years are not jobs; a degree with years stays in Education",
+  "work": [
+    {
+      "title": "IT Support Engineer",
+      "employer": "Link Datacenter",
+      "from": "2020-05",
+      "current": true
+    }
+  ],
+  "education": [
+    {
+      "qualification": "Bachelor of Computer Science",
+      "year": 2018
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "about": "Earlier check (Step 6.5): PDF lines broken in two; a job without dates",
+  "pdf": true,
+  "work": [
+    {
+      "title": "Marketing Manager",
+      "employer": "SADA CODE company",
+      "from": "2014-09",
+      "to": "2015-07",
+      "duties": 2
+    },
+    {
+      "title": "Accountant",
+      "employer": "Rooya Holding Group",
+      "from": null,
+      "duties": 2
+    }
+  ],
+  "work_mark": "check"
+}
