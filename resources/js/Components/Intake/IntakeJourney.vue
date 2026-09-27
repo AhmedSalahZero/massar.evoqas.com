@@ -178,6 +178,8 @@ onMounted(() => {
 
 // ── Moving through the steps ─────────────────────────────────────
 const stepError = ref('');
+// The server's rules (App\Support\PasswordRules): 8+ characters, a capital letter, a number, a symbol.
+const strongPassword = (p) => p.length >= 8 && /\p{Lu}/u.test(p) && /\p{N}/u.test(p) && /[\p{Z}\p{S}\p{P}]/u.test(p);
 function check(id) {
     if (id === 'about' && !(form.name_ar.trim() || form.name_en.trim())) return t('intake.need_name');
     if (id === 'about' && !form.gender) return t('intake.need_gender');
@@ -186,7 +188,7 @@ function check(id) {
     if (id === 'place' && !form.governorate) return t('intake.need_governorate');
     if (id === 'work' && form.work_history.some((j) => !j.title.trim() || !j.from)) return t('intake.need_job');
     if (id === 'consent' && !form.privacy) return t('join.need_privacy');
-    if (id === 'account' && form.password.length < 8) return t('join.need_password');
+    if (id === 'account' && !strongPassword(form.password)) return t('join.need_password');
     if (id === 'account' && form.password !== form.password_confirmation) return t('join.need_same_password');
     return '';
 }
@@ -237,7 +239,8 @@ const occTitle = (block) => { const s = occIn(block, block.esco ? 'esco' : prefs
 // ── Save ─────────────────────────────────────────────────────────
 const err = (k) => form.errors[k] ?? '';
 const stepOf = (key) => STEPS.find((s) => s.fields.some((f) => key === f || key.startsWith(`${f}.`)))?.id ?? null;
-const errorList = computed(() => Object.entries(form.errors).filter(([k]) => k !== 'duplicate').map(([k, m]) => ({ key: k, message: m, step: stepOf(k) })));
+// (duplicate and cv have their own boxes above the list)
+const errorList = computed(() => Object.entries(form.errors).filter(([k]) => !['duplicate', 'cv'].includes(k)).map(([k, m]) => ({ key: k, message: m, step: stepOf(k) })));
 function save() {
     if (skill.value.trim()) addSkill();
     form.transform((d) => {

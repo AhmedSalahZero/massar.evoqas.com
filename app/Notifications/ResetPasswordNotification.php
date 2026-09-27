@@ -2,8 +2,6 @@
 
 namespace App\Notifications;
 
-use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
@@ -12,13 +10,13 @@ use Illuminate\Notifications\Notification;
 //  Location: app/Notifications/ResetPasswordNotification.php
 //
 //  The password reset link email, in the user's own language.
-//  Queued. Views: emails/reset-password + text twin.
+//  Sent at once, not queued: the person is waiting for it, and a
+//  queued email is never sent without a queue worker running.
+//  Views: emails/reset-password + text twin.
 // ══════════════════════════════════════════════════════════════════
 
-class ResetPasswordNotification extends Notification implements ShouldQueue
+class ResetPasswordNotification extends Notification
 {
-    use Queueable;
-
     /**
      * @param  string  $route   where the link goes: staff 'password.reset', job seekers 'seeker.password.reset'
      * @param  string  $broker  whose expiry time the email states (config/auth.php passwords.*)
@@ -37,10 +35,13 @@ class ResetPasswordNotification extends Notification implements ShouldQueue
     public function toMail(object $notifiable): MailMessage
     {
         $locale = $notifiable->language ?? app()->getLocale();
-        $url = url(route($this->route, [
+        // On APP_URL, never on the address the request came in on: that
+        // comes from the request's Host header, which a sender can set to
+        // their own site and so receive the reset token.
+        $url = rtrim((string) config('app.url'), '/').route($this->route, [
             'token' => $this->token,
             'email' => $notifiable->getEmailForPasswordReset(),
-        ], false));
+        ], false);
 
         $expireMinutes = config('auth.passwords.'.$this->broker.'.expire');
 

@@ -8,7 +8,7 @@
 
 {{ $url }}
 
-{{ __('emails.reset_password.expire', ['count' => $expireMinutes], $lang) }}
+{{ trans_choice('emails.reset_password.expire', $expireMinutes, [], $lang) }}
 
 {{ __('emails.reset_password.ignore', [], $lang) }}
 

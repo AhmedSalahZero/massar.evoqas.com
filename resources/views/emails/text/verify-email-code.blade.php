@@ -19,7 +19,7 @@
 
     {{ $code }}
 
-{{ __('emails.verify_code.expire', ['count' => $expiresMinutes], $lang) }}
+{{ trans_choice('emails.verify_code.expire', $expiresMinutes, [], $lang) }}
 
 {{ __('emails.verify_code.instruction', [], $lang) }}
 

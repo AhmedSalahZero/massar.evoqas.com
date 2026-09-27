@@ -16,6 +16,7 @@ use ZipArchive;
 //    docx($lines)   a Word file; a line starting with '#' is a bold heading
 //    pdf($lines)    a PDF with real text (made with dompdf)
 //    scannedPdf()   a PDF with no text in it, like a scan
+//    lockedPdf()    a PDF that opens only with a password
 //    oldDoc()       an old Word .doc file
 //  PDF tests need Poppler's pdftotext; without it they are skipped
 //  (needsPdfReader) and say why.
@@ -63,6 +64,18 @@ trait MakesCvFiles
             ."3 0 obj<</Type/Page/Parent 2 0 R/MediaBox[0 0 595 842]>>endobj\ntrailer<</Root 1 0 R>>\n%%EOF";
         $path = tempnam(sys_get_temp_dir(), 'cv');
         file_put_contents($path, $pdf);
+
+        return new UploadedFile($path, $name, 'application/pdf', null, true);
+    }
+
+    protected function lockedPdf(string $name = 'locked.pdf'): UploadedFile
+    {
+        $dompdf = new Dompdf;
+        $dompdf->loadHtml('<p>Ahmed Hassan Mahmoud</p><p>Senior Accountant, Cairo</p>');
+        $dompdf->render();
+        $dompdf->getCanvas()->get_cpdf()->setEncryption('user-password', 'owner-password');
+        $path = tempnam(sys_get_temp_dir(), 'cv');
+        file_put_contents($path, $dompdf->output());
 
         return new UploadedFile($path, $name, 'application/pdf', null, true);
     }

@@ -35,7 +35,8 @@ use Tests\TestCase;
 //      read but waits for review: the months would be a guess
 //    • gender is never guessed from a name
 //    • a title matching two occupations equally goes to review, never guessed
-//    • scans, old .doc files: "could not be read", file still kept
+//    • scans, password-protected PDFs, old .doc files: "could not be
+//      read" (each with its own reason), file still kept
 //    • no PDF reader yet: "could not be read", never blamed on the file;
 //      "Read again" reads it once the reader is set up, and the upload
 //      page's warning goes as soon as it is
@@ -208,7 +209,7 @@ class CvBankTest extends TestCase
         $this->assertNull($occ['choice']);
     }
 
-    public function test_scans_and_old_word_files_cannot_be_read_but_are_kept(): void
+    public function test_scans_locked_pdfs_and_old_word_files_cannot_be_read_but_are_kept(): void
     {
         $worker = User::factory()->employee()->create();
         [$old] = $this->upload($worker, $this->oldDoc());
@@ -220,6 +221,12 @@ class CvBankTest extends TestCase
         [$scan] = $this->upload($worker, $this->scannedPdf());
         $this->assertSame('unreadable', $scan['status']);
         $this->assertSame('scanned', $scan['problem'], 'Run `php artisan cv:check` to see what Poppler says.');
+
+        // Password-protected: said so, not "damaged".
+        [$locked] = $this->upload($worker, $this->lockedPdf());
+        $this->assertSame('unreadable', $locked['status']);
+        $this->assertSame('locked', $locked['problem'], 'Run `php artisan cv:check` to see what Poppler says.');
+        Storage::disk('cvs')->assertExists($this->doc($locked['uuid'])->stored_path);
     }
 
     // ── No PDF reader yet ───────────────────────────────────────────

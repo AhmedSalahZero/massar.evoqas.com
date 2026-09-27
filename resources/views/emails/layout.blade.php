@@ -16,17 +16,6 @@
     | turns the quotes in a font stack into &#039; inside the CSS.
     */
     $lang = $locale ?? app()->getLocale();
-
-    /*
-    | Built from mail.asset_url, NOT url(). An <img> in an email is
-    | fetched by the recipient's mail client from wherever they are,
-    | so the host has to be reachable from the public internet —
-    | which a development APP_URL (massar.test) is not. Getting
-    | that wrong shows a broken image in every email the product
-    | sends, and nothing reports it, because the mail itself goes out
-    | fine.
-    */
-    $logoUrl = rtrim((string) config('mail.asset_url'), '/').'/images/logo-icon-light.png';
 @endphp
 <!DOCTYPE html>
 <html lang="{{ $lang }}" dir="{!! $s['dir'] !!}">
@@ -34,7 +23,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {{-- Designed for a light background: asks Apple Mail and others not
+         to recolour it in dark mode (which darkens the white card but
+         not the colours set on the text inside it). --}}
+    <meta name="color-scheme" content="light">
+    <meta name="supported-color-schemes" content="light">
     <title>{{ $subject ?? config('app.name') }}</title>
+
+    {{-- The app's fonts (as app.blade.php loads them). Clients that allow
+         web fonts (Apple Mail, iOS) use them; the others fall back to the
+         system fonts named after them in EmailStyles. --}}
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 
     {{-- A bonus for clients that keep it, never the only copy.
          Everything here is already applied inline; this block exists
@@ -50,18 +49,23 @@
     </style>
 </head>
 <body style="margin:0; padding:0; width:100% !important; background-color:#F4F6F9; -webkit-text-size-adjust:100%;">
+{{-- What the inbox list shows under the subject; without it, the list
+     shows the first text of the email ("M Massar مسار …"). --}}
+@hasSection('preheader')
+<div style="{!! $s['preheader'] !!}">@yield('preheader')</div>
+@endif
 <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="{!! $s['wrapper'] !!}">
     <tr>
         <td align="center" style="padding:0;">
             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="{!! $s['container'] !!}">
                 <tr>
                     <td class="m-header" style="{!! $s['header'] !!}">
-                        {{-- alt is empty and the name is real text
-                             below: a blocked image then leaves a
-                             clean header rather than a broken-image
-                             icon sitting next to the brand name. --}}
-                        <img src="{{ $logoUrl }}" alt="" width="52" height="52" style="{!! $s['logo'] !!}">
-                        <p style="{!! $s['brand'] !!}">{{ $lang === 'ar' ? 'مسار' : 'Massar' }}</p>
+                        {{-- The brand mark and name as in the app's top bar,
+                             in HTML (no image to block or break). --}}
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="{!! $s['markTable'] !!}">
+                            <tr><td width="44" height="44" align="center" valign="middle" style="{!! $s['mark'] !!}">M</td></tr>
+                        </table>
+                        <p style="{!! $s['brand'] !!}">Massar <span style="{!! $s['brandAlt'] !!}">مسار</span></p>
                     </td>
                 </tr>
                 <tr><td style="{!! $s['accent'] !!}">&nbsp;</td></tr>

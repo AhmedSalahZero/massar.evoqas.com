@@ -1,7 +1,10 @@
 @extends('emails.layout')
+@php $lang = $locale ?? app()->getLocale(); @endphp
+
+{{-- The code in the inbox preview: it can be typed without opening the email. --}}
+@section('preheader', __('emails.verify_code.preheader', ['code' => $code], $lang))
 
 @section('content')
-@php $lang = $locale ?? app()->getLocale(); @endphp
 
 <h1 style="{!! $s['h1'] !!}">{{ __('emails.verify_code.heading', [], $lang) }}</h1>
 
@@ -24,7 +27,7 @@
      everything else relied on a <style> block the mail client threw
      away, which is why it looked like the odd one out. --}}
 <p style="{!! $s['caption'] !!}">
-    {{ __('emails.verify_code.expire', ['count' => $expiresMinutes], $lang) }}
+    {{ trans_choice('emails.verify_code.expire', $expiresMinutes, [], $lang) }}
 </p>
 
 <p style="{!! $s['p'] !!}">{{ __('emails.verify_code.instruction', [], $lang) }}</p>

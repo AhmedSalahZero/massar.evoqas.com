@@ -120,9 +120,11 @@ class TextExtractor
         try {
             // -enc UTF-8  Arabic comes out as real letters
             // -nopgbrk    no page-break characters
-            // -q          no warnings mixed into the text
+            // no -q       the text goes to a file, so Poppler's messages cannot
+            //             mix into it — and they are needed: "Incorrect password"
+            //             is how a locked PDF is told apart from a damaged one
             // no -layout  keeps two-column CVs in reading order
-            $normal = $this->runPoppler(['-q', '-enc', 'UTF-8', '-nopgbrk'], $in, $base.'.txt');
+            $normal = $this->runPoppler(['-enc', 'UTF-8', '-nopgbrk'], $in, $base.'.txt');
             if ($normal['text'] === null) {
                 return ['', $this->classify($normal)];
             }
@@ -133,7 +135,7 @@ class TextExtractor
             // Arabic word order — so it is only tried on mostly-Latin CVs, and
             // kept only when its sections come out clearly better.
             if (preg_match_all('/\p{Arabic}/u', $text) < preg_match_all('/[A-Za-z]/', $text) * 0.3) {
-                $raw = $this->runPoppler(['-q', '-raw', '-enc', 'UTF-8', '-nopgbrk'], $in, $base.'-raw.txt');
+                $raw = $this->runPoppler(['-raw', '-enc', 'UTF-8', '-nopgbrk'], $in, $base.'-raw.txt');
                 $reader = app(CvReader::class);
                 if ($raw['text'] !== null && $reader->structureScore($raw['text']) > $reader->structureScore($text)) {
                     $text = $raw['text'];
@@ -171,7 +173,9 @@ class TextExtractor
 
     private function failed(array $result): array
     {
-        $this->lastError = trim('pdftotext '.($result['crashed'] ? 'could not be started' : 'stopped with code '.$result['code']).': '.$result['error']);
+        // A damaged PDF can print hundreds of warnings: the last lines (why Poppler stopped) are kept.
+        $error = mb_strlen($result['error']) > 500 ? '…'.mb_substr($result['error'], -500) : $result['error'];
+        $this->lastError = trim('pdftotext '.($result['crashed'] ? 'could not be started' : 'stopped with code '.$result['code']).': '.$error);
         Log::warning('cv.pdf_read_failed', ['binary' => $this->binary(), 'detail' => $this->lastError]);
 
         return $result;

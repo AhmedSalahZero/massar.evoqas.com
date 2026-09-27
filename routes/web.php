@@ -62,39 +62,41 @@ Route::get('/', HomeController::class)->name('home');
 //  Public site for job seekers (Step 10). Separate from the staff
 //  sign-in (/login): job seekers have their own accounts ('seeker'
 //  guard) and never see the partner workspace.
+//  Each throttle has its own name (throttle:tries,minutes,NAME): see
+//  routes/auth.php for why.
 // ══════════════════════════════════════════════════════════════════
 Route::name('seeker.')->group(function () {
     // The occupation search used by the registration questions.
-    Route::get('/occupation-search', [BeneficiaryController::class, 'pick'])->middleware('throttle:60,1')->name('occupations');
-    Route::get('/employer-search', EmployerSearchController::class)->middleware('throttle:60,1')->name('employers');
+    Route::get('/occupation-search', [BeneficiaryController::class, 'pick'])->middleware('throttle:60,1,occupation-search')->name('occupations');
+    Route::get('/employer-search', EmployerSearchController::class)->middleware('throttle:60,1,employer-search')->name('employers');
 
     Route::middleware('guest:seeker')->group(function () {
         Route::get('/join', [JoinController::class, 'index'])->name('join');
-        Route::post('/join/cv', [JoinController::class, 'readCv'])->middleware('throttle:10,1')->name('join.cv');
-        Route::post('/join', [JoinController::class, 'store'])->middleware('throttle:10,1')->name('join.store');
+        Route::post('/join/cv', [JoinController::class, 'readCv'])->middleware('throttle:10,1,join-cv')->name('join.cv');
+        Route::post('/join', [JoinController::class, 'store'])->middleware('throttle:10,1,join')->name('join.store');
 
         Route::get('/sign-in', [SeekerAuthController::class, 'create'])->name('login');
-        Route::post('/sign-in', [SeekerAuthController::class, 'store'])->middleware('throttle:10,1');
+        Route::post('/sign-in', [SeekerAuthController::class, 'store'])->middleware('throttle:10,1,seeker-login');
         Route::get('/sign-in/forgot', [SeekerAuthController::class, 'forgot'])->name('password.request');
-        Route::post('/sign-in/forgot', [SeekerAuthController::class, 'sendLink'])->middleware('throttle:5,1')->name('password.email');
+        Route::post('/sign-in/forgot', [SeekerAuthController::class, 'sendLink'])->middleware('throttle:5,1,seeker-password-email')->name('password.email');
         Route::get('/sign-in/reset/{token}', [SeekerAuthController::class, 'resetShow'])->name('password.reset');
-        Route::post('/sign-in/reset', [SeekerAuthController::class, 'reset'])->middleware('throttle:5,1')->name('password.store');
+        Route::post('/sign-in/reset', [SeekerAuthController::class, 'reset'])->middleware('throttle:5,1,seeker-password-reset')->name('password.store');
     });
 
     Route::middleware('seeker.auth')->group(function () {
         Route::post('/sign-out', [SeekerAuthController::class, 'destroy'])->name('logout');
         Route::get('/join/verify', [SeekerAuthController::class, 'verifyShow'])->name('verify');
-        Route::post('/join/verify', [SeekerAuthController::class, 'verifyStore'])->middleware('throttle:10,1')->name('verify.store');
-        Route::post('/join/verify/resend', [SeekerAuthController::class, 'verifyResend'])->middleware('throttle:6,1')->name('verify.resend');
+        Route::post('/join/verify', [SeekerAuthController::class, 'verifyStore'])->middleware('throttle:10,1,seeker-verify')->name('verify.store');
+        Route::post('/join/verify/resend', [SeekerAuthController::class, 'verifyResend'])->middleware('throttle:6,1,seeker-verify-resend')->name('verify.resend');
 
         Route::middleware('seeker.verified')->group(function () {
             Route::get('/me', [MyProfileController::class, 'show'])->name('profile');
             Route::get('/me/edit', [MyProfileController::class, 'edit'])->name('profile.edit');
             Route::patch('/me', [MyProfileController::class, 'update'])->name('profile.update');
             Route::patch('/me/visibility', [MyProfileController::class, 'visibility'])->name('profile.visibility');
-            Route::delete('/me', [MyProfileController::class, 'destroy'])->middleware('throttle:10,1')->name('profile.destroy');
+            Route::delete('/me', [MyProfileController::class, 'destroy'])->middleware('throttle:10,1,seeker-delete')->name('profile.destroy');
             Route::get('/me/cv', [MyProfileController::class, 'download'])->name('cv.download');
-            Route::post('/me/cv', [MyProfileController::class, 'upload'])->middleware('throttle:10,1')->name('cv.upload');
+            Route::post('/me/cv', [MyProfileController::class, 'upload'])->middleware('throttle:10,1,seeker-cv')->name('cv.upload');
             Route::get('/me/cv/{uuid}', [MyProfileController::class, 'changes'])->whereUuid('uuid')->name('cv.changes');
             Route::post('/me/cv/{uuid}', [MyProfileController::class, 'apply'])->whereUuid('uuid')->name('cv.apply');
         });

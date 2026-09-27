@@ -4,7 +4,7 @@
 
 {{ __('emails.subscription_ending.greeting', ['name' => $user->name], $lang) }}
 
-{{ __('emails.subscription_ending.intro', ['company' => $company->name, 'days' => $daysLeft], $lang) }}
+{{ trans_choice('emails.subscription_ending.intro', $daysLeft, ['company' => $company->name, 'days' => $daysLeft], $lang) }}
 
 {{ __('emails.subscription_ending.ends_on_label', [], $lang) }} {{ $endsOn }}
 

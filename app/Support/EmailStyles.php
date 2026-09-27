@@ -37,6 +37,12 @@ final class EmailStyles
     private const BODY  = '#4A5568';
     private const MUTED = '#8A96A8';
 
+    // The brand mark on the navy header uses the app's dark-theme colours,
+    // as the app's own .brand-mark does on a dark background.
+    private const MARK_FROM  = '#3E82D6';   // --ms-navy, dark theme
+    private const MARK_TO    = '#059767';   // --ms-green, dark theme
+    private const MARK_SOLID = '#218C9E';   // between the two, for clients without gradients (Outlook)
+
     /**
      * @return array<string, string>
      */
@@ -44,9 +50,11 @@ final class EmailStyles
     {
         $rtl   = $locale === 'ar';
         $align = $rtl ? 'right' : 'left';
+        // The app's fonts (app.blade.php): Inter, and Tajawal for Arabic.
         $font  = $rtl
-            ? "'Cairo', 'Segoe UI', Tahoma, sans-serif"
+            ? "'Tajawal', 'Segoe UI', Tahoma, sans-serif"
             : "'Inter', 'Segoe UI', Helvetica, Arial, sans-serif";
+        $brandFont = "'Inter', 'Tajawal', 'Segoe UI', Helvetica, Arial, sans-serif";
 
         $text = "font-family:{$font}; font-size:15px; line-height:1.6;";
 
@@ -55,20 +63,27 @@ final class EmailStyles
             'align' => $align,
             'font'  => $font,
 
+            // The inbox preview line (hidden in the email itself).
+            'preheader' => 'display:none; font-size:1px; line-height:1px; max-height:0; max-width:0; opacity:0; overflow:hidden; mso-hide:all; color:#F4F6F9;',
+
             'wrapper'   => 'width:100%; background-color:#F4F6F9; padding:32px 16px;',
             'container' => 'max-width:560px; margin:0 auto; background:#FFFFFF; border-radius:14px; overflow:hidden; border:1px solid #DDE2EB;',
             'header'    => 'background:'.self::NAVY.'; padding:24px 32px; text-align:center;',
 
-            // The square icon, not the full logo. The full lockup is
-            // portrait (409x610), so `height:48px` rendered it 32px
-            // wide — a sliver. Sizing it by width instead would make
-            // the header ~180px tall.
-            'logo'      => 'width:52px; height:52px; display:block; border:0; margin:0 auto 8px;',
+            // The app's own brand mark (app.css .brand-mark: a white M on
+            // the brand gradient), drawn in HTML rather than an image.
+            // Most mail clients block remote images by default, and an
+            // <img> also needs a public address to load from; text and
+            // colour always arrive. Outlook for Windows shows it square
+            // and in one colour (MARK_SOLID).
+            'markTable' => 'margin:0 auto 10px; border-collapse:separate;',
+            'mark'      => 'width:44px; height:44px; border-radius:11px; background-color:'.self::MARK_SOLID.'; '
+                .'background-image:linear-gradient(135deg, '.self::MARK_FROM.', '.self::MARK_TO.'); '
+                ."color:#FFFFFF; font-family:{$brandFont}; font-size:22px; font-weight:800; line-height:44px; text-align:center; mso-line-height-rule:exactly;",
 
-            // Most mail clients block remote images by default, so
-            // the header has to read without one. The brand name is
-            // real text beside the icon rather than part of it.
-            'brand'     => "font-family:{$font}; font-size:18px; font-weight:700; color:#FFFFFF; letter-spacing:-0.01em; margin:0; text-align:center;",
+            // "Massar مسار", as in the app's top bar (.brand-name).
+            'brand'     => "font-family:{$brandFont}; font-size:18px; font-weight:800; color:#FFFFFF; letter-spacing:0.02em; margin:0; text-align:center;",
+            'brandAlt'  => 'color:'.self::MARK_TO.';',
             'accent'    => 'height:4px; line-height:4px; font-size:0; background:'.self::GREEN.';',
             'body'      => "padding:32px; {$text} color:".self::NAVY."; text-align:{$align};",
 
@@ -78,7 +93,7 @@ final class EmailStyles
 
             // The caption belongs to the box above it, so it centres
             // with the box rather than aligning to the body text.
-            'caption' => "margin:0 0 16px; font-family:{$font}; font-size:13px; line-height:1.6; color:".self::MUTED.'; text-align:center;',
+            'caption' => "margin:8px 0 16px; font-family:{$font}; font-size:13px; line-height:1.6; color:".self::MUTED.'; text-align:center;',
 
             'codeBox' => 'margin:24px 0; padding:20px; background:#E8F5EF; border:2px dashed '.self::GREEN.'; border-radius:12px; text-align:center;',
             'code'    => "font-family:'Courier New', Courier, monospace; font-size:32px; font-weight:800; letter-spacing:0.35em; color:".self::NAVY.';',

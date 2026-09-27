@@ -53,7 +53,7 @@ class DiagnoseMail extends Command
             ['verify_peer', config('mail.mailers.smtp.verify_peer') ? 'true' : 'false'],
             ['from address', config('mail.from.address')],
             ['from name', config('mail.from.name')],
-            ['image host', config('mail.asset_url') ?: '(unset)'],
+            ['links in emails (APP_URL)', config('app.url') ?: '(unset)'],
             ['QUEUE_CONNECTION', config('queue.default')],
             ['verification enabled', AuthVerification::enabled() ? 'yes' : 'NO — no codes are ever sent'],
         ]);
@@ -105,11 +105,12 @@ class DiagnoseMail extends Command
             $problems[] = 'SMTP is selected but no password is set.';
         }
 
-        // An <img> in an email is fetched by the recipient's mail
-        // client, from wherever they are. A host only this machine
-        // can resolve produces a broken image for every recipient
-        // forever, and nothing reports it — the mail sends fine.
-        $host = parse_url((string) config('mail.asset_url'), PHP_URL_HOST) ?: '';
+        // Password reset links are built on APP_URL (see
+        // ResetPasswordNotification) and opened by the recipient from
+        // wherever they are. A host only this machine can resolve gives
+        // every recipient a link that goes nowhere, and nothing reports
+        // it — the mail sends fine. (The emails load no images.)
+        $host = parse_url((string) config('app.url'), PHP_URL_HOST) ?: '';
 
         $unreachable = $host === ''
             || str_ends_with($host, '.test')
@@ -118,8 +119,8 @@ class DiagnoseMail extends Command
             || filter_var($host, FILTER_VALIDATE_IP) !== false;
 
         if ($unreachable) {
-            $problems[] = "Email images point at \"{$host}\", which nobody outside this machine can reach — "
-                .'every recipient sees a broken image. Set MAIL_ASSET_URL to the site\'s public address.';
+            $problems[] = "Links in emails point at \"{$host}\", which nobody outside this machine can open — "
+                .'password reset links go nowhere. Set APP_URL to the site\'s public address (e.g. https://massar.evoqas.com).';
         }
 
         if (! $problems) {
