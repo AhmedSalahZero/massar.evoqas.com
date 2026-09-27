@@ -4,7 +4,7 @@
     "type": "module",
     "scripts": {
         "clean": "node -e \"require('fs').rmSync('public/build', { recursive: true, force: true })\"",
-        "build": "npm run clean && vite build",
+        "build": "vite build",
         "dev": "vite"
     },
     "devDependencies": {
